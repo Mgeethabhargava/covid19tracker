@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Covid-19 Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href=".\static\cs\1.css">
+<script type="text/javascript" src=".\static\js\script.js"></script>  
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+<form>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- The sidebar -->
+<div class="sidebar"><br>
+  <p><a class = "active" href="{{ url_for('covid19')}}" >COVID-19</a></p>
+  <p><a href="{{ url_for('covidworld')}}">COVID-19 WORLD</a></p>
+  <p><a href="{{ url_for('covidindia')}}">COVID-19 INDIA</a></p>
+  <p><a href="{{ url_for('coviddetails')}}">COVID-19 DETAILS</a></p>     
+</div>
+  <div class="topnav" style="background-color:dodgerblue">
+      <a class="active" href="{{ url_for('covid19')}}" style="color:white;">COVID-19 TRACKER</a>  
+	<div class="login-container">  
+  </div>
+    </div>
+<!-- Page content -->
+<div class="imgcontainer" align="center" style="padding-top:60px; padding-bottom:20px;  ">    
+    <h1>Welcome to Covid-19 Dashboard</h1><br><br>
+    <img src=".\static\img\1.gif" style="height:550; width:1080;" alt="OpenPics">
+      
+</div>
+</form>
+
+</body>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Covid-19 Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">    
+<link rel="stylesheet" href=".\static\cs\1.css">
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- The sidebar -->
+<div class="sidebar"><br>
+  <p><a class = "active" href="{{ url_for('covid19')}}" >COVID-19</a></p>
+  <p><a href="{{ url_for('covidworld')}}">COVID-19 WORLD</a></p>
+  <p><a href="{{ url_for('covidindia')}}">COVID-19 INDIA</a></p>
+  <p><a href="{{ url_for('coviddetails')}}">COVID-19 DETAILS</a></p>       
+</div>
+  <div class="topnav" style="background-color:dodgerblue">
+      <a class="active" href="{{ url_for('covid19')}}" style="color:white;">COVID-19 TRACKER</a>  
+	<div class="login-container">  
+        
+  </div>
+    </div>
+<!-- Page content -->
+<div class="content" align="center" style="padding-top:50px">     
+  <h1>Coronavirus disease(COVID-19)</h1><br><br>
+  <div style="text-align:left;">    
+      <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.</p>
+      <h2>How it spreads</h2>
+      <p>The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.
+You can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.</p>
+      <h2>Symptoms</h2>
+      <p>COVID-19 affects different people in different ways. Most infected people will develop mild to moderate symptoms.</p>
+      <h4>Common symptoms:</h4>
+      <p>• fever.</p>
+      <p>• tiredness.</p>
+      <p>• dry cough.</p>
+      <p>Some people may experience:</p>
+      <p>• aches and pains.</p>
+      <p>• nasal congestion.</p>
+      <p>• runny nose.</p>
+      <p>• sore throat.</p>
+      <p>• diarrhoea.</p>
+      <p>On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.People with mild symptoms who are otherwise healthy should self-isolate. Seek medical attention if you have a fever, a cough, and difficulty breathing. Call ahead.</p>
+      <h2>Preventions</h2>
+      <p>Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local public health agency</p>
+      <p>To prevent the spread of COVID-19:</p>
+      <p>• Clean your hands often. Use soap and water, or an alcohol-based hand rub.</p>
+      <p>• Maintain a safe distance from anyone who is coughing or sneezing.</p>
+      <p>• Don’t touch your eyes, nose or mouth.</p>
+      <p>• Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</p>
+      <p>• Stay home if you feel unwell.</p>
+      <p>• If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.</p>
+      <p>• Follow the directions of your local health authority.</p>
+      <p>Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively, therefore protecting you and others.</p>
+      <h2>Treatments</h2>
+      <p>To date, there are no specific vaccines or medicines for COVID-19.Treatments are under investigation, and will be tested through clinical trials.</p>
+      <h4>Self-Care</h4>
+      <p>If you feel sick you should rest, drink plenty of fluid, and eat nutritious food. Stay in a separate room from other family members, and use a dedicated bathroom if possible. Clean and disinfect frequently touched surfaces.
+      Everyone should keep a healthy lifestyle at home. Maintain a healthy diet, sleep, stay active, and make social contact with loved ones through the phone or internet. Children need extra love and attention from adults during difficult times. Keep to regular routines and schedules as much as possible.
+      It is normal to feel sad, stressed, or confused during a crisis. Talking to people you trust, such as friends and family, can help. If you feel overwhelmed, talk to a health worker or counsellor.</p>
+      <h4>Medical Treatments</h4>
+      <p>If you have mild symptoms and are otherwise healthy, self-isolate and contact your medical provider or a COVID-19 information line for advice.Seek medical care if you have a fever, a cough, and difficulty breathing. Call in advance.</p>              
+      <p><a href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=treatment">Learn more on who.int</a></p>
+    </div>            
+</div>    
+
+</body>
+
+
