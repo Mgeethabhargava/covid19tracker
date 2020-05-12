@@ -1,15 +1,13 @@
 from flask import Flask,session,flash,render_template,redirect,session,url_for,request,send_from_directory,send_file
 from clist import cname,sname
 from covid import Covid
-from covid_india import states
 import pydantic
 import requests
+from Covid19India import CovidIndia 
 
 app = Flask(__name__)
 app.secret_key = 'Alexas'
-
-
-    
+obj = CovidIndia() 
 
 @app.route('/')
 def main():
@@ -44,8 +42,8 @@ def covidcountry():
 def covidindia():
     country = "India"
     snames = sname()
-    covid = Covid(source="worldometers")
-    data = covid.get_status_by_country_name(country)
+    stats = obj.getstats() 
+    data = stats['total']
     total = data["confirmed"]
     cured = data["recovered"]
     death = data["deaths"]
@@ -58,7 +56,13 @@ def covidstates():
     snames = sname()
     if request.method == 'POST':
         state = request.form['snamess']
-        data = states.getdata(state)
+        stats = obj.getstats() 
+        data = stats['states']
+        data = data[state]
+        total = data["confirmed"]
+        cured = data["recovered"]
+        death = data["deaths"]
+        data = {"Total":total,"Cured":cured,"Death":death}
         return render_template('covidindia.html',data=data,state=state,snames = snames)
     # return render_template('covidindia.html',rows=rows)
 
