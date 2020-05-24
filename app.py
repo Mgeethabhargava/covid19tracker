@@ -3,11 +3,11 @@ from clist import cname,sname
 from covid import Covid
 import pydantic
 import requests
-from Covid19India import CovidIndia 
+from covid_india import states
 
 app = Flask(__name__)
 app.secret_key = 'Alexas'
-obj = CovidIndia() 
+ 
 
 @app.route('/')
 def main():
@@ -20,7 +20,7 @@ def covid19():
 @app.route("/covidworld",methods = ['POST','GET'])
 def covidworld():
     cnames = cname()
-    covid = Covid(source="worldometers")
+    covid =Covid()
     country = "World"    
     confirmed = covid.get_total_confirmed_cases()
     recovered = covid.get_total_recovered()
@@ -33,7 +33,8 @@ def covidworld():
 def covidcountry():
     if request.method == 'POST':
         cnames = cname()
-        covid = Covid(source="worldometers")
+        covid = Covid()
+        #covid = covid()
         country = request.form['cnamess']
         data = covid.get_status_by_country_name(country)
         return render_template('covidworld.html',data=data,country=country,cnames = cnames) 
@@ -42,8 +43,8 @@ def covidcountry():
 def covidindia():
     country = "India"
     snames = sname()
-    stats = obj.getstats() 
-    data = stats['total']
+    covid = Covid()
+    data = covid.get_status_by_country_name(country)
     total = data["confirmed"]
     cured = data["recovered"]
     death = data["deaths"]
@@ -56,12 +57,11 @@ def covidstates():
     snames = sname()
     if request.method == 'POST':
         state = request.form['snamess']
-        stats = obj.getstats() 
-        data = stats['states']
-        data = data[state]
-        total = data["confirmed"]
-        cured = data["recovered"]
-        death = data["deaths"]
+        stats = states.getdata()
+        data = stats[state]
+        total = data["Total"]
+        cured = data["Cured"]
+        death = data["Death"]
         data = {"Total":total,"Cured":cured,"Death":death}
         return render_template('covidindia.html',data=data,state=state,snames = snames)
     # return render_template('covidindia.html',rows=rows)
